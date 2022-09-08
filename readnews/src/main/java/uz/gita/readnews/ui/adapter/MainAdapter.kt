@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import uz.gita.mylibrary.NewsData
 import uz.gita.readnews.R
+import java.util.*
 
 class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
 
-    var data=ArrayList<NewsData>()
+    var data= ArrayList<NewsData>()
     @SuppressLint("NotifyDataSetChanged")
     fun submitItems(newsItems:List<NewsData>){
         data.clear()
@@ -32,8 +33,8 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
             val item=data[adapterPosition]
             title.text=item.title
             desc.text=item.description
-            like.text=item.description
-            notLike.text=item.description
+            like.text=item.like
+            notLike.text=item.notlike
             seen.text=item.description
             Glide
                 .with(image)
