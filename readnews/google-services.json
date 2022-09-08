@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "280143935083",
+    "project_id": "example-firbase",
+    "storage_bucket": "example-firbase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280143935083:android:a88098f2611790fcd7e32e",
+        "android_client_info": {
+          "package_name": "uz.gita.readnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280143935083-2i87gcd1dqluh1ppbd5cg39giletqgj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-UOY65TNCnMaQfQDwFAcSoR451iKGv88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280143935083-2i87gcd1dqluh1ppbd5cg39giletqgj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
