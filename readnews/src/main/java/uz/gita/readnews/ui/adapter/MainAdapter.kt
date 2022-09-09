@@ -37,7 +37,7 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
             like.text=item.like
             notLike.text=item.notlike
             date.text=item.date
-            seen.text=item.description
+            seen.text=item.seen
             Glide
                 .with(image)
                 .load(item.image)

@@ -79,13 +79,15 @@
         tools:layout_editor_absoluteY="129dp" />
 
     <TextView
-        app:layout_constraintBottom_toTopOf="@id/txtDate"
-        app:layout_constraintTop_toBottomOf="@id/txtTitle"
         android:id="@+id/description"
-        android:layout_width="wrap_content"
+
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:ellipsize="end"
+        android:lines="3"
         android:text="Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba "
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintBottom_toTopOf="@id/txtDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
