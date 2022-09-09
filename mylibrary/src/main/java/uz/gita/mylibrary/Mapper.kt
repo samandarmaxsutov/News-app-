@@ -5,7 +5,7 @@ import com.google.firebase.firestore.DocumentSnapshot
 object Mapper {
     fun DocumentSnapshot.toNewsData() = NewsData(
         id = this["id"].toString(),
-        title = this["name"].toString(),
+        title = this["title"].toString(),
         description = this["description"].toString(),
         image = this["image"].toString(),
         like = this["like"].toString(),
