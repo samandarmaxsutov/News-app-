@@ -59,4 +59,7 @@ dependencies {
 
     //Alter
     implementation 'com.github.tapadoo:alerter:7.2.4'
+
+    //viewpager
+    implementation 'com.github.zhpanvip:viewpagerindicator:1.2.1'
 }

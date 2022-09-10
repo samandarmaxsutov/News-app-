@@ -101,4 +101,9 @@ dependencies {
 
 
     implementation 'com.github.Spikeysanju:ZoomRecylerLayout:1.0'
+
+
+
+    //viewpager
+    implementation 'com.github.zhpanvip:viewpagerindicator:1.2.1'
 }

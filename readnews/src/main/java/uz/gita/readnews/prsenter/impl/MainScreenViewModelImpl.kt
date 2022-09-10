@@ -18,7 +18,7 @@ class MainScreenViewModelImpl : MainScreenViewModel, ViewModel() {
 
     init {
 
-       viewModelScope.launch(Dispatchers.IO) {
+
            newsLiveData.addSource(repository.getAll2()) {
 
                if (it.isSuccess) {
@@ -27,8 +27,6 @@ class MainScreenViewModelImpl : MainScreenViewModel, ViewModel() {
                } else {
                    massageLiveData.postValue(  it.exceptionOrNull().toString())
                }
-           }
-
        }
     }
 
