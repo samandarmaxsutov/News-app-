@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:lineSpacingExtra="8sp"
             android:padding="16dp"
+            android:autoLink="web"
             android:text="Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba "
             android:textSize="20sp" />
     </androidx.core.widget.NestedScrollView>

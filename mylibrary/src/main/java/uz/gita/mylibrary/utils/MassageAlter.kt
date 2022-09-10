@@ -10,8 +10,8 @@ import com.tapadoo.alerter.Alerter
 
 fun massage(activity: Activity, massage:String){
     Alerter.create(activity)
-        .setTitle("Alert Title")
-        .setText("Alert text...")
+        .setTitle("News App")
+        .setText(massage)
         .setDuration(10000)
         .show()
 }
