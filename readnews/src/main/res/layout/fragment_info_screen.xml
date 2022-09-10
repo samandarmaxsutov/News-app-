@@ -74,7 +74,7 @@
             added earlier in strings.xml file.This is simply the
             the content to be scrolled -->
         <TextView
-            android:background="@drawable/nested_bg"
+
             android:id="@+id/txtDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
