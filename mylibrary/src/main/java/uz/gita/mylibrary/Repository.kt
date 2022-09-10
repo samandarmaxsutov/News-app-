@@ -1,6 +1,6 @@
 package uz.gita.mylibrary
 
 object Repository {
-    val orderRepository : NewsRepository by lazy { OrderRepositoryImpl() }
+    val newsRepository : NewsRepository by lazy { OrderRepositoryImpl() }
 
 }

@@ -18,5 +18,9 @@
         android:id="@+id/infoScreen"
         android:name="uz.gita.readnews.ui.screen.InfoScreen"
         android:label="fragment_info_screen"
-        tools:layout="@layout/fragment_info_screen" />
+        tools:layout="@layout/fragment_info_screen" >
+        <argument
+            android:name="newsData"
+            app:argType="uz.gita.mylibrary.NewsData" />
+    </fragment>
 </navigation>

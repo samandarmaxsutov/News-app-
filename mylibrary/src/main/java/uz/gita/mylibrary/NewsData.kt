@@ -1,5 +1,6 @@
 package uz.gita.mylibrary
 
+import java.io.Serializable
 import java.util.*
 
 data class NewsData(
@@ -11,4 +12,4 @@ data class NewsData(
     var notlike:String="0",
     var seen:String="0",
     var date:String
-)
+):Serializable
