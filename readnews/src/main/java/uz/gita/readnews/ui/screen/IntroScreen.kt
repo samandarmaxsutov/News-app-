@@ -22,9 +22,9 @@ class IntroScreen : Fragment(R.layout.fragment_intro_screen) {
     private var _binding:FragmentIntroScreenBinding?=null
     private val binding get() = _binding!!
     private val list=(arrayListOf<IntroData>(
-        IntroData(R.drawable.ic_launcher_foreground,"Intro1","Intro description1"),
-        IntroData(R.drawable.ic_launcher_foreground,"Intro2","Intro description2"),
-        IntroData(R.drawable.ic_launcher_foreground,"Intro3","Intro description3")
+        IntroData(R.drawable.logo,"Intro1","Intro description1"),
+        IntroData(R.drawable.logo,"Intro2","Intro description2"),
+        IntroData(R.drawable.logo,"Intro3","Intro description3")
     ))
     private val adapter: IntroAdapter by lazy { IntroAdapter(this,list)}
 
