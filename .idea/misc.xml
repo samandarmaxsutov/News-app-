@@ -3,20 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/drawable/background.xml" value="0.165" />
         <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/drawable/nested_bg.xml" value="0.165" />
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/drawable/toolbar_bg.xml" value="0.165" />
         <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/fragment_info_screen.xml" value="0.2" />
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/fragment_intro_screen.xml" value="0.19010416666666666" />
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/fragment_main_screen.xml" value="0.33" />
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/fragment_splash_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/fragment_info_screen.xml" value="0.22" />
+        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/fragment_main_screen.xml" value="0.44243792325056436" />
         <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/item_news.xml" value="0.18" />
         <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/item_test.xml" value="0.33" />
-        <entry key="..\:/11-02 androoidprojects/NewsAlXorazmiy/readnews/src/main/res/layout/page_intro.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/fragment_main_screen.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/newspresenter/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.163" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable-anydpi/ic_action_eye.xml" value="0.163" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.163" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable/back_btn.xml" value="0.163" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable/background.xml" value="0.1945" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable/ic_launcher_background.xml" value="0.163" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable/nested_bg.xml" value="0.2015" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable/search.xml" value="0.1625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/drawable/toolbar_bg.xml" value="0.2015" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/activity_main.xml" value="0.1675213675213675" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/fragment_info_screen.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/fragment_intro_screen.xml" value="0.1675213675213675" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/fragment_main_screen.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/fragment_splash_screen.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/item_news.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/item_test.xml" value="0.5" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/item_test.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/News-app-/readnews/src/main/res/layout/page_intro.xml" value="0.1675213675213675" />
       </map>
     </option>
   </component>
@@ -25,5 +34,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.18" />
+      </ProjectState>
+    </option>
   </component>
 </project>
