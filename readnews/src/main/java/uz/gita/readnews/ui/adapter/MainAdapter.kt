@@ -6,10 +6,13 @@ import android.graphics.Color.alpha
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewPropertyAnimatorListener
 import androidx.recyclerview.widget.RecyclerView
+import by.kirich1409.viewbindingdelegate.internal.findRootView
 import com.bumptech.glide.Glide
 import jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder
 
@@ -30,7 +33,7 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
         data.addAll(newsItems)
         notifyDataSetChanged()
     }
-    inner class Holder(view: View):RecyclerView.ViewHolder(view){
+    inner class Holder(private  val view: View):RecyclerView.ViewHolder(view){
 
         private val title:TextView=view.findViewById(R.id.txtTitle)
         private val desc:TextView=view.findViewById(R.id.description)
@@ -39,11 +42,13 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
         private val seen:TextView=view.findViewById(R.id.txtVies)
         private val date:TextView=view.findViewById(R.id.txtDate)
         private val image:ImageView=view.findViewById(R.id.imageView)
+        private val card:CardView= view.findViewById(R.id.main_card)
         init {
             view.setOnClickListener {
                 onClickListener?.invoke(data[absoluteAdapterPosition])
             }
         }
+
         fun bind(){
             val item=data[absoluteAdapterPosition]
             title.text=item.title
@@ -56,8 +61,9 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
                 .with(image)
                 .load(item.image)
                 .centerCrop()
-                .placeholder(R.drawable.ic_launcher_foreground)
+                .placeholder(R.drawable.logo)
                 .into(image);
+            card.startAnimation(AnimationUtils.loadAnimation(view.context,R.anim.anim4))
         }
 
     }
