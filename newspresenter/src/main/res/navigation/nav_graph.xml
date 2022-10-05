@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+
+    <fragment
+        android:id="@+id/mainScreen2"
+        android:name="uz.gita.newsalxorazmiy.ui.screen.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen2_to_addScreen"
+            app:destination="@id/addScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_splash_screen"
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.newsalxorazmiy.ui.screen.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen2"
+            app:destination="@id/mainScreen2"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScreen"
+        android:name="uz.gita.newsalxorazmiy.ui.screen.AddScreen"
+        android:label="fragment_add_screen"
+        tools:layout="@layout/fragment_add_screen" />
+</navigation>

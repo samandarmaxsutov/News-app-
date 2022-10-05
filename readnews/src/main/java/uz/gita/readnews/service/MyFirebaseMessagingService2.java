@@ -1,11 +1,14 @@
 package uz.gita.readnews.service;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
+import android.provider.MediaStore;
 import android.widget.RemoteViews;
 
 import androidx.annotation.NonNull;
@@ -13,6 +16,8 @@ import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import java.io.IOException;
 
 import uz.gita.readnews.R;
 import uz.gita.readnews.ui.activity.MainActivity;
@@ -49,29 +54,32 @@ public class MyFirebaseMessagingService2
             // Since the notification is received directly from
             // FCM, the title and the body can be fetched
             // directly as below.
-            showNotification(
-                    remoteMessage.getNotification().getTitle(),
-                    remoteMessage.getNotification().getBody());
+            try {
+                showNotification(
+                        remoteMessage.getNotification().getTitle(),
+                        remoteMessage.getNotification().getBody(),
+                        remoteMessage.getNotification().getImageUrl());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     // Method to get the custom Design for the display of
     // notification.
     private RemoteViews getCustomDesign(String title,
-                                        String message) {
-        RemoteViews remoteViews = new RemoteViews(
-                getApplicationContext().getPackageName(),
-                R.layout.notification);
-        remoteViews.setTextViewText(R.id.title, title);
-        remoteViews.setTextViewText(R.id.message, message);
-        remoteViews.setImageViewResource(R.id.icon,
-                R.drawable.logo);
+                                        String message, Uri imageUri) {
+              RemoteViews remoteViews = new RemoteViews(getApplicationContext().getPackageName(), R.layout.notification);
+        remoteViews.setTextViewText(R.id.title_notif, title);
+        remoteViews.setTextViewText(R.id.desc_notif, message);
+        remoteViews.setImageViewUri(R.id.avatar,
+                imageUri);
         return remoteViews;
     }
 
     // Method to display the notifications
     public void showNotification(String title,
-                                 String message) {
+                                 String message, Uri imageUrl) throws IOException {
         // Pass the intent to switch to the MainActivity
         Intent intent
                 = new Intent(this, MainActivity.class);
@@ -94,20 +102,25 @@ public class MyFirebaseMessagingService2
                 = new NotificationCompat
                 .Builder(getApplicationContext(),
                 channel_id)
-                .setSmallIcon(R.drawable.logo)
+                .setSmallIcon(R.drawable.ic_action_message)
                 .setAutoCancel(true)
                 .setVibrate(new long[]{1000, 1000, 1000,
                         1000, 1000})
                 .setOnlyAlertOnce(true)
-                .setContentIntent(pendingIntent);
+                .setContentIntent(pendingIntent)
+                .setColor(getResources().getColor(R.color.fon))
+                .setLargeIcon(MediaStore.Images.Media.getBitmap(this.getContentResolver(), Uri.parse(imageUrl.toString())));;
 
         // A customized design for the notification can be
         // set only for Android versions 4.1 and above. Thus
         // condition for the same is checked here.
         if (Build.VERSION.SDK_INT
                 >= Build.VERSION_CODES.JELLY_BEAN) {
-            builder = builder.setContent(
-                    getCustomDesign(title, message));
+            builder = builder
+                    .setSmallIcon(R.drawable.ic_action_message)
+                    .setContentText(message)
+                    .setContentTitle(title)
+                    .setShowWhen(true);
         } // If Android Version is lower than Jelly Beans,
         // customized layout cannot be used and thus the
         // layout is set as follows

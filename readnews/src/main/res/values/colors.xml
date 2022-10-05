@@ -14,4 +14,8 @@
     <color name="bg_page">#F6F6F6</color>
     <color name="white1">#FFFFFFFF</color>
     <color name="fon">#FF283593</color>
+
+    <color name="colorGradientStart">#5612d6</color>
+    <color name="colorGradientCenter">#210cae</color>
+    <color name="colorGradientEnd">#2472fc</color>
 </resources>

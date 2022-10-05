@@ -10,11 +10,12 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewPropertyAnimatorListener
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.internal.findRootView
 import com.bumptech.glide.Glide
-import jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder
+
 
 import uz.gita.mylibrary.NewsData
 import uz.gita.readnews.R
@@ -42,9 +43,9 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
         private val seen:TextView=view.findViewById(R.id.txtVies)
         private val date:TextView=view.findViewById(R.id.txtDate)
         private val image:ImageView=view.findViewById(R.id.imageView)
-        private val card:CardView= view.findViewById(R.id.main_card)
+        private val layout:ConstraintLayout= view.findViewById(R.id.itemList)
         init {
-            view.setOnClickListener {
+            layout.setOnClickListener {
                 onClickListener?.invoke(data[absoluteAdapterPosition])
             }
         }
@@ -63,7 +64,6 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.Holder>() {
                 .centerCrop()
                 .placeholder(R.drawable.logo)
                 .into(image);
-            card.startAnimation(AnimationUtils.loadAnimation(view.context,R.anim.anim4))
         }
 
     }

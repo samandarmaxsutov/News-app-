@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
@@ -30,6 +31,7 @@ class IntroScreen : Fragment(R.layout.fragment_intro_screen) {
 
     private val viewModel: IntroScreenViewModel by viewModels<IntroScreenViewModelImpl>()
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState)
 
         viewModel.openMainScreenLiveData.observe(this){

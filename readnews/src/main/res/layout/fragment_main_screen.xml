@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".ui.screen.MainScreen">
 
+
     <LinearLayout
         android:id="@+id/action_bar"
         android:layout_width="match_parent"
@@ -46,23 +47,59 @@
 
 
     </LinearLayout>
+<!--    <io.supercharge.shimmerlayout.ShimmerLayout-->
+<!--        android:id="@+id/shimmer_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone"-->
+<!--        android:paddingTop="6dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/action_bar"-->
+<!--        app:shimmer_animation_duration="2000">-->
+<!--   <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    <include-->
+<!--        android:layout="@layout/item_news"/>-->
+<!--    </LinearLayout>-->
+<!--      </ScrollView>-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list"
+
+<!--    </io.supercharge.shimmerlayout.ShimmerLayout>-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white1"
+
         android:orientation="vertical"
-        android:paddingTop="10dp"
-        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/action_bar"
-        tools:listitem="@layout/item_test" />
+        app:swipeRefreshLayoutProgressSpinnerBackgroundColor="@color/fon">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 
     <LinearLayout
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#45000000"
+        android:background="@color/white"
         android:gravity="center"
         android:visibility="gone">
 
@@ -80,14 +117,16 @@
     </LinearLayout>
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/no_found"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/nofound"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

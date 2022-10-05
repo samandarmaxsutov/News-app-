@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:background="#FFFFFF"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     tools:context=".ui.screen.InfoScreen">
 
@@ -22,19 +21,30 @@
             android:layout_height="wrap_content"
             android:elevation="10dp"
             app:title="            "
+            app:toolbarId="@id/toolbarinfo"
             app:collapsedTitleTextAppearance="@style/TextAppearance.Collapsed"
-            app:contentScrim="@drawable/toolbar_bg"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
             app:expandedTitleTextAppearance="@style/TextAppearance.Collapsed"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
+<!-- //TODO Shimmer  -->
+<!--Internet sekin bo'gan paytdagi ishlash-->
+<!-- -&ndash;&gt; Progress Bar va b-->
+<!--            Link va dateni to'g'irlash-->
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="false"
+                android:cropToPadding="true"
+                android:layerType="software"
+                android:minHeight="275dp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/index"
                 app:layout_collapseMode="parallax"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                app:layout_collapseParallaxMultiplier="0.7" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarinfo"
@@ -42,7 +52,7 @@
 
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+                app:popupTheme="@style/MyToolbarStyle" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -71,6 +81,7 @@
                 android:fontFamily="@font/newyork"
                 android:maxLines="2"
                 android:text="Lorem ipsum dolor sit amet,consectetur adipiscing elit."
+                android:textColor="#192A3E"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +101,9 @@
                 android:gravity="start"
                 android:lineSpacingExtra="8sp"
                 android:padding="16dp"
+                android:justificationMode="inter_word"
                 android:text="Kuni kecha bo'lib o'tg\alaba Kuni kecha bo'lib o'tlaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilarimiz g\alaba Kuni kecha bo'lib o'tgan\n olimpiadada o'quvchilar"
+                android:textColor="#192A3E"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -123,6 +136,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_vertical"
                 android:text="Sept. 14, 2022"
+                android:textColor="#192A3E"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -142,4 +156,19 @@
         app:fabSize="normal"
         app:layout_anchor="@id/appBarLayout"
         app:layout_anchorGravity="end|bottom" />
+<FrameLayout
+    android:visibility="gone"
+    android:id="@+id/layout_image"
+    android:background="#DA000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/imageView_"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_background"/>
+</FrameLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

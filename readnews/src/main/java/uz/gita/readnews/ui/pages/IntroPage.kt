@@ -16,6 +16,7 @@ class IntroPage: Fragment(R.layout.page_intro) {
     private val binding get() = _binding!!
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
        val data=arguments?.get("data")as IntroData
         binding.imageIntro.setImageResource(data.image)

@@ -20,18 +20,21 @@ class MainScreenViewModelImpl : MainScreenViewModel, ViewModel() {
 
 
         newsLiveData.addSource(repository.getAll2()) {
-            progressBarLiveData.value=true
+
             if (it.isSuccess) {
                 newsLiveData.postValue(  it.getOrNull())
-
+                progressBarLiveData.value=false
 
 //                   massageLiveData.postValue(  "ma'lumotlar yangilandi")
             }
             else {
                 massageLiveData.postValue(  it.exceptionOrNull().toString())
-
+                progressBarLiveData.value=false
             }
-            progressBarLiveData.value=false
+
+        }
+        newsLiveData.addSource(repository.progressBar){
+            progressBarLiveData.value=it
         }
     }
 
@@ -40,7 +43,6 @@ class MainScreenViewModelImpl : MainScreenViewModel, ViewModel() {
     }
 
     override fun searchView(txt: String) {
-        progressBarLiveData.value=true
         newsLiveData.addSource(repository.getAll2()) {
 
             val list=ArrayList<NewsData>()

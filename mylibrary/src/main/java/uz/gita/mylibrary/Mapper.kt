@@ -11,6 +11,7 @@ object Mapper {
         like = this["like"].toString(),
         notlike = this["notlike"].toString(),
         seen = this["seen"].toString(),
-        date = this["date"].toString()
+        date = this["date"].toString(),
+        link=this["link"].toString()
     )
 }
