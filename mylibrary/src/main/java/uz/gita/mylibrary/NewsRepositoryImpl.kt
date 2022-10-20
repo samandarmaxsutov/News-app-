@@ -1,4 +1,4 @@
-package uz.gita.mylibrary
+package uz.gita.mylibrary.samandar
 
 import android.util.Log
 import androidx.lifecycle.LiveData
